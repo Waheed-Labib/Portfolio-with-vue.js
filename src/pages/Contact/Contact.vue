@@ -1,3 +1,11 @@
+<script setup lang="ts">
+  import ContactForm from "/src/pages/Contact/ContactForm/ContactForm.vue";
+  import ContactInfo from "/src/pages/Contact/ContactInfo/ContactInfo.vue";
+</script>
+
 <template>
-  <h1>Contact Page</h1>
+  <div class="flex h-96">
+    <ContactForm/>
+    <ContactInfo/>
+  </div>
 </template>

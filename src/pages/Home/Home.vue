@@ -1,5 +1,9 @@
+ <script setup lang="ts">
+   import Hero from "/src/pages/Home/Hero/Hero.vue"
+ </script>
+ 
  <template>
-    <p>Home page</p>
+    <Hero/>
  </template>
 
  
