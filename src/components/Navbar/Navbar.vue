@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex gap-3 bg-red-300 px-8 py-4">
+  <nav class="flex items-center justify-end gap-8 bg-(--background-high) text-(--text-high) text-sm px-8 py-4">
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
     <router-link to="/projects">Projects</router-link>
