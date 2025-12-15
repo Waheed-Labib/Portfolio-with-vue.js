@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div >
+  <div class="space-mono-regular">
     <Navbar/>
     <router-view/>
   </div>
