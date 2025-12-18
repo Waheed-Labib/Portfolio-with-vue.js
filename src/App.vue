@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="space-mono-regular">
+  <div class="space-mono-regular bg-(--background-high) min-h-screen">
     <Navbar/>
     <router-view/>
   </div>
