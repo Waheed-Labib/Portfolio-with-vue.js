@@ -9,3 +9,132 @@
     --text-low: #e5e5e5;
 
 }
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(var(--chars)) forwards;
+}
+
+.spring-text {
+    display: inline-block;
+    animation: spring 850ms cubic-bezier(0.22, 1.61, 0.36, 1) 1;
+    transform-origin: center bottom;
+    will-change: transform;
+}
+
+.sequence p {
+    opacity: 0;
+    animation: showText 0.6s ease forwards;
+}
+
+.sequence p:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.sequence p:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.sequence p:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+.rotating {
+    display: inline-block;
+    animation: rotateAnimation 2s ease-in-out 1;
+    transform-origin: center center;
+    /* rotate around the center */
+}
+
+.coin {
+    transform-style: preserve-3d;
+    animation: coinFlip 0.5s ease-in-out 1;
+    perspective: 600px;
+    /* gives depth for 3D effect */
+}
+
+.slide-in-left {
+    transform: translateX(-24px);
+
+    animation: slideInLeft var(--anim-duration, 280ms) ease-out var(--anim-delay, 0ms) forwards;
+}
+
+/* Keyframes */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes spring {
+    0% {
+        transform: translateY(12px);
+    }
+
+    45% {
+        transform: translateY(-10px);
+    }
+
+    65% {
+        transform: translateY(5px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes showText {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes coinFlip {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(60deg);
+    }
+
+    50% {
+        transform: rotateY(0deg);
+    }
+
+    75% {
+        transform: rotateY(-60deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+    }
+}
