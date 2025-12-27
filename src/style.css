@@ -1,14 +1,35 @@
 @import "tailwindcss";
 
-:root {
+.honeymoon-suite-theme {
 
-    --primary: #fca311;
-    --background-high: #000;
-    --background-low: #14213d;
+    --primary: #e76f51;
+    --secondary: #ceac90;
+    --background-high: #2a1f2d;
+    --background-low: #3d2c41;
     --text-high: #fff;
-    --text-low: #e5e5e5;
+    --text-low: #f1dca7;
 
 }
+
+.forest-mist-theme {
+    --primary: #4caf8f;
+    --secondary: #c7e0da;
+    --background-high: #1f2a26;
+    --background-low: #2e3d38;
+    --text-high: #eaf7f3;
+    --text-low: #b7d6cc;
+}
+
+.midnight-neon-theme {
+    --primary: #6c63ff;
+    --secondary: #e2bcd4;
+    --background-high: #0f1020;
+    --background-low: #1a1c3a;
+    --text-high: #ffffff;
+    --text-low: #dddef7;
+}
+
+
 
 .typewriter {
     display: inline-block;
@@ -59,6 +80,33 @@
     transform: translateX(-24px);
 
     animation: slideInLeft var(--anim-duration, 280ms) ease-out var(--anim-delay, 0ms) forwards;
+}
+
+.rating-fill {
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: fill-bar 300ms ease-out forwards;
+    animation-delay: var(--delay);
+}
+
+.wing {
+    width: 100px;
+    height: 64px;
+    border-top: 4px solid currentColor;
+    opacity: 0.8;
+}
+
+.wing-left {
+    border-radius: 0 100% 0 100%;
+    transform-origin: right center;
+    animation: flap 5s ease-in-out infinite;
+}
+
+.wing-right {
+    border-radius: 100% 0 100% 0;
+    transform-origin: left center;
+    transform: scaleX(-1);
+    animation: flap 5s ease-in-out infinite;
 }
 
 /* Keyframes */
@@ -113,14 +161,10 @@
 
 @keyframes coinFlip {
     0% {
-        transform: rotateY(0deg);
-    }
-
-    25% {
         transform: rotateY(60deg);
     }
 
-    50% {
+    30% {
         transform: rotateY(0deg);
     }
 
@@ -136,5 +180,25 @@
 @keyframes slideInLeft {
     to {
         transform: translateX(0);
+    }
+}
+
+@keyframes fill-bar {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes flap {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(18deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }

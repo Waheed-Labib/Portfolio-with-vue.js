@@ -35,49 +35,26 @@
 
         </div>
           
-      <!-- <div class="text-(--text-high) text-lg flex flex-col items-center justify-center gap-4 py-12">
-          <div v-for="specialization in specializationList" :key="specialization.topic" class="w-full px-8 md:w-1/2 lg:w-1/3">
+      <div class="text-(--text-high) text-lg flex flex-col items-center justify-center gap-4">
+          <div v-for="(specialization, idx) in specializationList" :key="specialization.topic" class="w-full p-4 md:w-1/2 border-(--text-low)/30 text-center mx-8 flex flex-col items-center justify-center gap-4">
             
-            <p class="mb-4 typewriter" :style="{ '--chars': specialization.topic.length }">{{ specialization.topic }}</p>
+            <Delayed :delay="6000 + idx * 1000">
+              <p class="mb-2 typewriter" :style="{ '--chars': specialization.topic.length }">{{ specialization.topic }}</p>
+            </Delayed>
       
-            <div>
+            <Delayed :delay="8000 + specializationList.length * 1000">
               <Rating :ratingLevel="specialization.expertiseLevel"></Rating>
-            </div>
+            </Delayed>
           </div>
       </div>
       
-      <div class="py-12 text-(--text-high) flex items-center justify-center gap-8 text-5xl">
+      <Delayed :delay="9000 + specializationList.length * 1000">
+        <div class="mt-24 pb-24 text-(--text-high) flex items-center justify-center gap-8 text-5xl">
           <span class="wing wing-left"></span>
           <p class="spring-text">Still Growing</p>
           <span class="wing wing-right"></span>
-      </div> -->
+        </div>
+      </Delayed>
   </div>
 </template>
 
-<style scoped>
-  .wing {
-    width: 100px;
-    height: 64px;
-    border-top: 4px solid currentColor;
-    opacity: 0.8;
-  }
-
-  .wing-left {
-    border-radius: 0 100% 0 100%;
-    transform-origin: right center;
-    animation: flap 5s ease-in-out infinite;
-  }
-
-  .wing-right {
-    border-radius: 100% 0 100% 0;
-    transform-origin: left center;
-    transform: scaleX(-1);
-    animation: flap 5s ease-in-out infinite;
-  }
-
-  @keyframes flap {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(18deg); }
-    100% { transform: rotate(0deg); }
-  }
-</style>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type DelayedVue from '../Delayed/Delayed.vue';
 
     const props = defineProps<{ avatarImage?: string }>();
 </script>
