@@ -1,0 +1,1 @@
+export type Theme = "midnight-neon-theme" | "honeymoon-suite-theme" | "forest-mist-theme"
