@@ -1,28 +1,24 @@
 export interface Experience {
-    company: string
+    companyName: string
+    companyLogo: string
     role: string
     startDate: string
     endDate?: string
-    duration: string // <-- added
-    description: string
+    description: string[]
 }
 
 export const experienceList: Experience[] = [
     {
-        company: 'Acme Corp',
-        role: 'Frontend Developer',
-        startDate: '2021-06',
-        endDate: '2023-08',
-        duration: '2y 2m', // <-- added
-        description: 'Built UI with Vue 3 and Tailwind.' // added
-    },
-    {
-        company: 'Example LLC',
-        role: 'Intern',
-        startDate: '2020-01',
-        endDate: '2020-12',
-        duration: '11m', // <-- added
-        description: 'Worked on internal tools.' // added
+        companyName: "Diligite",
+        companyLogo: "/public/assets/images/diligite_logo.png",
+        role: "Frontend Engineer",
+        startDate: "January 2025",
+        endDate: "November 2025",
+        description: [
+            "Developed responsive web applications including e-commerce sites and admin dashboards using React, Next.js, and Vue.js.",
+            "Built interactive user interfaces with reusable component libraries and efficient state management solutions.",
+            "Ensured mobile-responsive and cross-browser compatible development across all major browsers and devices."
+        ]
     }
 ]
 

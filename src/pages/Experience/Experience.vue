@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div class="p-8 bg-amber-200"> 
-      <h1>Experience Page</h1>
+  <div class=""> 
+      <h1 class="text-(--text-high) text-4xl font-bold m-8 text-center">My Experience</h1>
       <ExperienceList />
   </div>
 </template>
